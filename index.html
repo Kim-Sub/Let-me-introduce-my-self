@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<!-- 구글폰트아이콘 --><link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+<!-- 폰트어썸 --><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<!-- 제이쿼리cdn --><script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+<!-- 타이핑js --><script src='./js/typed.js'></script>
+    <script src='./js/script.js' defer></script>
+    <link rel='stylesheet' href='./css/reset.css'/>
+    <link rel='stylesheet' href='./css/style.css'/>
+    
+</head>
+
+
+
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <main id="main">
+        <!-- 메인 섹션  -->
+        <div id="section">
+            <div>
+                <div class="main">
+                    <video id="mainVideo" autoplay muted loop> 
+                        <source src="./video/main1.mp4" type="video/mp4">
+                    </video>
+                    <p id="videoText"></p>
+                </div>
+                <script> // 타이핑 js
+                    $('#videoText').typed({
+                        strings:['HELLO  STRANGER'],
+                        typeSpeed:100,
+                        loop:false,
+                    })
+                </script>
+            </div>
+        </div> 
+        <section id="sectionLeft">
+            <div>
+                <i class="fas fa-sad-cry"></i> what's ?
+            </div>
+        </section>
+        <section id="sectionUp">
+            <div>
+                <i class="far fa-id-card"></i> my id
+            </div>
+        </section>
+        <section id="sectionRight">
+            <div>
+                <i class="fas fa-file-word"></i> portfolio
+            </div>
+        </section>
+        <section id="sectionDown">
+            <div>
+                <i class="fas fa-users"></i> sns
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
