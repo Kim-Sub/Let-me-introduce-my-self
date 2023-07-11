@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@font-face {
+  font-family: GenesisSans;
+  font-style: "normal";
+  font-weight: 400;
+  src: url(../font/GenesisSans.ttf) format("truetype");
+}
 body {
   color: white;
   overflow: hidden;
@@ -9,13 +15,14 @@ body {
 section {
   font-size: 80px;
   opacity: 1;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
   opacity: 0;
   transition: 0.5s;
 }
 section:hover {
   opacity: 1;
-  transform: scale(0.9);
+  transform: scale(0.85);
   border: 2px solid white;
 }
 section div {
@@ -27,10 +34,46 @@ section div {
   justify-content: center;
 }
 
+.subPage {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
 #main {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+#gotoMain {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px 5px;
+  opacity: 0;
+  z-index: 10;
+}
+#gotoMain:hover {
+  border: 1px solid white;
+  border-radius: 30px;
+}
+#gotoMain i {
+  margin-right: 10px;
+  animation: scale infinite alternate linear;
+  animation-duration: 1s;
+}
+@keyframes scale {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 #section {
@@ -66,11 +109,11 @@ section div {
   display: grid;
   place-items: center;
   background-color: black;
-  mix-blend-mode: multiply;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  color: yellow;
+  mix-blend-mode: multiply;
+  color: white;
   font-weight: 900;
   font-size: 160px;
   letter-spacing: -20px;
@@ -145,4 +188,26 @@ section div {
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#Left {
+  top: 0;
+  left: -100%;
+}
+
+#Up {
+  top: -100%;
+  background: red;
+}
+
+#Right {
+  top: 0;
+  left: 100%;
+  background: blue;
+}
+
+#Down {
+  top: 100%;
+  left: 0%;
+  background: green;
 }/*# sourceMappingURL=style.css.map */

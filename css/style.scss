@@ -1,26 +1,51 @@
 @charset "utf-8";
+
 // 폰트 IBM Plex Sans KR // font-family: 'IBM Plex Sans KR', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
 // 폰트 나눔고딕 // font-family: 'Nanum Gothic', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+// 폰트 제네시스
+@font-face {font-family: GenesisSans; font-style: 'normal'; font-weight: 400;
+    src: url(../font/GenesisSans.ttf) format('truetype'); }
 
 // 컬러 팔레트
 $bg-color:#222;
 
+// ★ 공통 영역
 body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;}
 section{
-    font-size: 80px; opacity: 1;
-    background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s;
-    &:hover{opacity: 1; transform: scale(.9); border: 2px solid white; }
-    
+    font-size: 80px; opacity: 1; cursor: pointer;
+    background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s; 
+    &:hover{opacity: 1; transform: scale(.85); border: 2px solid white; }
     div{
         width: 400px; text-align: center; position: absolute; 
         display: flex; flex-direction: column; justify-content: center;
         }
 }
+.subPage{
+        width: 100%; height: 100%; z-index: 3;
+        position: absolute; transition: .5s ease-in-out; 
+}
+
+
 
 #main{width: 100%; height: 100%; position: relative;}
-// 메인 섹션
+// ★ 메인 섹션
+
+#gotoMain{
+        position: absolute; right: 2%; bottom: 2%; cursor: pointer;
+        font-size: 30px;  padding: 10px 5px ; opacity: 0; z-index: 10; 
+        &:hover{border: 1px solid white; border-radius: 30px;}
+        i{
+            margin-right: 10px;
+            animation: scale infinite alternate linear; animation-duration: 1s;
+            @keyframes scale {
+                from { transform: scale(.9); }
+                to { transform: scale(1.1); }
+            }
+        }
+}
+
 #section{
     width: 100%; height: 100%; position: absolute;
     >div{position: relative; width: 100%; height: 100%;
@@ -34,10 +59,10 @@ section{
                     filter: brightness(50%); 
                   } 
             }
-            #videoText{ // ★ 비디오 위 텍스트 필터
+            #videoText{ //  비디오 위 텍스트 필터
                 position: absolute; inset: 0; display: grid; place-items: center; background-color: black;
-                mix-blend-mode: multiply; user-select: none;
-                color:yellow; font-weight: 900; font-size: 160px; letter-spacing: -20px; white-space: pre;
+                user-select: none; mix-blend-mode: multiply;
+                color:white; font-weight: 900; font-size: 160px; letter-spacing: -20px; white-space: pre;
                 font-family: 'IBM Plex Sans KR', sans-serif;
                 
                 animation: mainFade  6s forwards; animation-iteration-count: 1; 
@@ -79,3 +104,8 @@ section{
     }
 }
 
+// ★ 서브페이지
+#Left{top: 0; left: -100%; }
+#Up{top: -100%; background: red;}
+#Right{top: 0; left: 100%; background:  blue;}
+#Down{top: 100%; left: 0%;  background: green;}
