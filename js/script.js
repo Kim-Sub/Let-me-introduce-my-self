@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       item.section.addEventListener('click', function() {
         item.element.style.top = '0';
         item.element.style.left = '0';
+        item.element.style.scale = '1';
       });
     });
   });
@@ -80,3 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
       mainVideo.src = randomSource;
     }
   });
+
+// 왜 안되냐 여기 
+/* #sectionRight 클릭시 #Right>ul opacity 변경 */ 
+document.addEventListener('DOMContentLoaded', function() {
+  var sectionRight = document.getElementById('sectionRight');
+  var rightUl = document.getElementsByClassName('.rightUl');
+
+  sectionRight.addEventListener('click', function() {
+    rightUl.style.opacity = '1'
+  });
+});

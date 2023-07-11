@@ -12,10 +12,11 @@
 $bg-color:#222;
 
 // ★ 공통 영역
-body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;}
+body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;
+    }
 section{
     font-size: 80px; opacity: 1; cursor: pointer;
-    background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s; 
+    background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s;
     &:hover{opacity: 1; transform: scale(.85); border: 2px solid white; }
     div{
         width: 400px; text-align: center; position: absolute; 
@@ -23,8 +24,10 @@ section{
         }
 }
 .subPage{
-        width: 100%; height: 100%; z-index: 3;
-        position: absolute; transition: .5s ease-in-out; 
+        background: rgba(0, 0, 0, .85);
+        width: 100%; height: 100%; z-index: 3; 
+        position: absolute; transition: .5s ease-in-out; scale: .1;
+        
 }
 
 
@@ -75,14 +78,14 @@ section{
         }
     }
 }
-#sectionLeft{ // my id
+#sectionLeft{
     width: 100%; height: 100%; position: absolute; z-index: 2; 
     clip-path: polygon(0 0, 25% 0, 35% 50%, 25% 100%, 0 100%, 0 50%); 
     div{
         top: 50%; transform: translateY(-50%); left: 5%;
     }
 }
-#sectionUp{
+#sectionUp{  // my id
     width: 100%; height: 100%; position: absolute; z-index: 2;
     clip-path: polygon(25% 0, 75% 0, 65% 50%, 35% 50%); 
     div{
@@ -96,6 +99,21 @@ section{
         top: 50%; transform: translateY(-50%);right: 5%;
     }
 }
+#Right{
+    display: flex; align-items: center; 
+        >ul{
+            z-index: 20; display: flex; opacity: 1; transition: 3s;
+            width: 200%; height: 75%; margin: 50px ; 
+            >li{
+                width: 25%; height: 100%; margin: 0 25px; border: 1px solid white;
+                padding: 10px;
+                
+            }
+        }
+}
+
+
+
 #sectionDown{ // SNS
     width: 100%; height: 100%; position: absolute; z-index: 2; 
     clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%); 
@@ -106,6 +124,6 @@ section{
 
 // ★ 서브페이지
 #Left{top: 0; left: -100%; }
-#Up{top: -100%; background: red;}
-#Right{top: 0; left: 100%; background:  blue;}
-#Down{top: 100%; left: 0%;  background: green;}
+#Up{top: -100%; }
+#Right{top: 0; left: 100%; ;}
+#Down{top: 100%; left: 0%; }

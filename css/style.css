@@ -35,11 +35,13 @@ section div {
 }
 
 .subPage {
+  background: rgba(0, 0, 0, 0.85);
   width: 100%;
   height: 100%;
   z-index: 3;
   position: absolute;
   transition: 0.5s ease-in-out;
+  scale: 0.1;
 }
 
 #main {
@@ -176,6 +178,27 @@ section div {
   right: 5%;
 }
 
+#Right {
+  display: flex;
+  align-items: center;
+}
+#Right > ul {
+  z-index: 20;
+  display: flex;
+  opacity: 1;
+  transition: 3s;
+  width: 200%;
+  height: 75%;
+  margin: 50px;
+}
+#Right > ul > li {
+  width: 25%;
+  height: 100%;
+  margin: 0 25px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
 #sectionDown {
   width: 100%;
   height: 100%;
@@ -197,17 +220,14 @@ section div {
 
 #Up {
   top: -100%;
-  background: red;
 }
 
 #Right {
   top: 0;
   left: 100%;
-  background: blue;
 }
 
 #Down {
   top: 100%;
   left: 0%;
-  background: green;
 }/*# sourceMappingURL=style.css.map */
