@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-/* .goSection 클릭시 .subPage 이동 */
+/* .goSection 클릭시 .subPage top:0; left:0 으로 이동 */
 document.addEventListener('DOMContentLoaded', function() {
     //var sectionLeft = document.getElementById('sectionLeft');
     var sectionUp = document.getElementById('sectionUp');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-/*   .goSection 클릭시 #gotoMain 등장 */
+/*   .goSection 클릭시 #gotoMain 등장 + 새로고침 */
 document.addEventListener('DOMContentLoaded', function() {
     var goSectionElements = document.getElementsByClassName('goSection');
     var gotoMain = document.getElementById('gotoMain');
@@ -56,4 +56,27 @@ document.addEventListener('DOMContentLoaded', function() {
       gotoMain.style.opacity = '0';
       location.reload(); 
     });
+  });
+
+
+/* 브라우저 새로고침시 videoSources 무작위 교체 */
+document.addEventListener('DOMContentLoaded', function() {
+    var mainVideo = document.getElementById('mainVideo');
+    
+    var videoSources = [
+      "./video/main1.mp4",
+      "./video/main2.mp4",
+      "./video/main3.mp4",
+      "./video/main4.mp4"
+    ];
+    var initialVideoPlayed = localStorage.getItem('initialVideoPlayed');
+    
+    if (!initialVideoPlayed) {
+      mainVideo.src = "./video/main1.mp4";
+      localStorage.setItem('initialVideoPlayed', true);
+    } else {
+      var randomIndex = Math.floor(Math.random() * (videoSources.length));
+      var randomSource = videoSources[randomIndex];
+      mainVideo.src = randomSource;
+    }
   });
