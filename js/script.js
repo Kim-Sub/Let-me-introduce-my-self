@@ -100,4 +100,5 @@ document.querySelector('#sectionRight').addEventListener('click', function() {
 });
 
 
-/* rightUL(포트폴리오)>li>div 높이 = 항상 너비와 동일하게  */
+/* #idCard 클릭시 scale(1)으로 변경 */
+// 원래 위치 ( top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%); )

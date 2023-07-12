@@ -4,9 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
 // 폰트 나눔고딕 // font-family: 'Nanum Gothic', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-// 폰트 제네시스
-@font-face {font-family: GenesisSans; font-style: 'normal'; font-weight: 400;
-    src: url(../font/GenesisSans.ttf) format('truetype'); }
+
 
 // 컬러 팔레트
 $bg-color:#222;
@@ -37,23 +35,11 @@ section{
 
 
 
+
+
 #main{width: 100%; height: 100%; position: relative;}
 // ★ 메인 섹션
 
-#gotoMain{
-        position: absolute; right: 2%; bottom: 2%; cursor: pointer;
-        font-size: 30px;  padding: 10px 5px ; opacity: 0; z-index: 10; 
-        &:hover{border: 1px solid white; border-radius: 30px;}
-        &:hover i{color: #e4b51a;}
-        i{
-            margin-right: 10px;
-            animation: scale infinite alternate linear; animation-duration: 1s;
-            @keyframes scale {
-                from { transform: scale(.9); }
-                to { transform: scale(1.1); }
-            }
-        }
-}
 
 #section{
     width: 100%; height: 100%; position: absolute;
@@ -79,6 +65,25 @@ section{
         }
     }
 }
+#gotoMain{ // 우측 하단 gotoMain 버튼
+    position: absolute; right: 2%; bottom: 2%; cursor: pointer;
+    font-size: 30px;  padding: 10px 5px ; opacity: 0; z-index: 10; 
+    &:hover{border: 1px solid white; border-radius: 30px;}
+    &:hover i{color: #e4b51a;}
+    i{
+        margin-right: 10px;
+        animation: scale infinite alternate linear; animation-duration: 1s;
+        @keyframes scale {
+            from { transform: scale(.9); }
+            to { transform: scale(1.1); }
+        }
+    }
+}
+#updateDate{ // 좌측 하단 updateDate
+    position: absolute; left: 0%; bottom: 0; z-index: 100;
+}
+
+
 #sectionLeft{
     width: 100%; height: 100%; position: absolute; z-index: 2; 
     clip-path: polygon(0 0, 25% 0, 35% 50%, 25% 100%, 0 100%, 0 50%); 
@@ -119,14 +124,40 @@ section{
 
 
 
-
+// ▲ sectionUp 위쪽
 #Up{
     #idCard{// idCard
-            position: absolute; top: 50%; left: 50%;
+            position: absolute;
             width: 90%; height: 90% ;background: rgba(255, 255, 255, .1);
-            transform: scale(1) translateX(-50%) translateY(-50%);}
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+            // 원래 위치 ( top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%); )
+            top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%);
+            display: flex; padding: 50px; box-sizing: border-box;
+            .profile{
+                width: 25%; height: 100% ;  box-sizing: border-box;
+                display: flex; flex-direction: column;
+                border-right: 2px solid white; padding-right: 50px;
+                img{flex: 4; border-radius: 50%;
+                    &:hover{box-shadow: 3px 3px 15px 2px rgba(255, 255, 255, 0.3);}
+                }
+                h1{flex: 1;
+                    p{text-align: center; font-size: 18px; color: white;}
+                }
+                div{flex:2; margin-top: 30px; border-top: 1px solid white;  box-sizing: border-box;
+                    h2{flex: 1;
+                        p{text-align: center;}
+                    }
+                }
+            }
+            .rightBox{
+                width: 75%; height: 100%; padding-left: 50px;
+            }
+        }
 }
 
+
+
+// ▶ sectionRight 오른쪽
 #Right{
     display: flex; align-items: center; 
         >ul{
