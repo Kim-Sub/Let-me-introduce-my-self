@@ -250,7 +250,7 @@ section div {
   margin-right: 5px;
 }
 
-h5 > p:hover {
+h5 > a > p:hover {
   color: #3789cc;
   transform: scale(1.4);
   transition: 0.3s;
