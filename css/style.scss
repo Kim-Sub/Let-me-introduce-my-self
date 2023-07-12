@@ -15,7 +15,7 @@ $bg-color:#222;
 body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;
     }
 section{
-    font-size: 80px; opacity: 1; cursor: pointer;
+    font-size: 60px; opacity: 1; cursor: pointer;
     background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s;
     &:hover{opacity: 1; transform: scale(.85); border: 2px solid white; }
     div{
@@ -29,6 +29,11 @@ section{
         position: absolute; transition: .5s ease-in-out; scale: .1;
         
 }
+.fa-html5{color: #e67533;}
+.fa-css3-alt{color: #3789cc;}
+.fa-bootstrap{color: #dd60e9;}
+.fa-sass{color: #c95189;}
+.fa-js{color: #e4b51a;}
 
 
 
@@ -39,6 +44,7 @@ section{
         position: absolute; right: 2%; bottom: 2%; cursor: pointer;
         font-size: 30px;  padding: 10px 5px ; opacity: 0; z-index: 10; 
         &:hover{border: 1px solid white; border-radius: 30px;}
+        &:hover i{color: #e4b51a;}
         i{
             margin-right: 10px;
             animation: scale infinite alternate linear; animation-duration: 1s;
@@ -56,11 +62,6 @@ section{
             width: 100%; height: 100%; z-index: -1;
             #mainVideo{
                 width: 100%; height: 100%; object-fit: cover;
-                filter: brightness(100%);
-                transition: filter 0.5s ease;
-                 &.dark-video {
-                    filter: brightness(50%); 
-                  } 
             }
             #videoText{ //  비디오 위 텍스트 필터
                 position: absolute; inset: 0; display: grid; place-items: center; background-color: black;
@@ -99,9 +100,32 @@ section{
         top: 50%; transform: translateY(-50%);right: 5%;
     }
 }
+#sectionDown{ // SNS
+    width: 100%; height: 100%; position: absolute; z-index: 2; 
+    clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%); 
+    div{
+        top: 70%; left: 50%; transform: translateX(-50%);
+    }
+}
 
 
 
+// ★ 서브페이지
+// 포지션 위치
+#Left{top: 0; left: -100%; }
+#Up{top: -100%; }
+#Right{top: 0; left: 100%; ;}
+#Down{top: 100%; left: 0%; }
+
+
+
+
+#Up{
+    #idCard{// idCard
+            position: absolute; top: 50%; left: 50%;
+            width: 90%; height: 90% ;background: rgba(255, 255, 255, .1);
+            transform: scale(1) translateX(-50%) translateY(-50%);}
+}
 
 #Right{
     display: flex; align-items: center; 
@@ -121,13 +145,15 @@ section{
                         object-fit: fill;
                     }
                 }
-                h1{flex: 1;}
+                h1{flex: 1; margin-top: 10px;}
                 h2{flex: 1;}
-                h3{flex: 1;}
-                h4{flex: 2;
-                    p{font-size: 14px; padding: 0 30px; margin-top: 20px}
+                h3{flex: 1;
+                    p{font-size: 18px;}
                 }
-                h5{flex: .8;}
+                h4{flex: 2.2;
+                    p{font-size: 14px; padding: 0 30px; margin-top: 20px; font-weight: lighter;}
+                }
+                h5{flex: .6;}
             }
         }
 }
@@ -135,21 +161,3 @@ section{
         i{margin-right: 5px;}
     }
     h5>a>p:hover{color: #3789cc; transform: scale(1.4); transition: .3s; }
-
-
-
-
-
-#sectionDown{ // SNS
-    width: 100%; height: 100%; position: absolute; z-index: 2; 
-    clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%); 
-    div{
-        top: 70%; left: 50%; transform: translateX(-50%);
-    }
-}
-
-// ★ 서브페이지
-#Left{top: 0; left: -100%; }
-#Up{top: -100%; }
-#Right{top: 0; left: 100%; ;}
-#Down{top: 100%; left: 0%; }

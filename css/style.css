@@ -13,7 +13,7 @@ body {
 }
 
 section {
-  font-size: 80px;
+  font-size: 60px;
   opacity: 1;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
@@ -44,6 +44,26 @@ section div {
   scale: 0.1;
 }
 
+.fa-html5 {
+  color: #e67533;
+}
+
+.fa-css3-alt {
+  color: #3789cc;
+}
+
+.fa-bootstrap {
+  color: #dd60e9;
+}
+
+.fa-sass {
+  color: #c95189;
+}
+
+.fa-js {
+  color: #e4b51a;
+}
+
 #main {
   width: 100%;
   height: 100%;
@@ -63,6 +83,9 @@ section div {
 #gotoMain:hover {
   border: 1px solid white;
   border-radius: 30px;
+}
+#gotoMain:hover i {
+  color: #e4b51a;
 }
 #gotoMain i {
   margin-right: 10px;
@@ -99,11 +122,6 @@ section div {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(100%);
-  transition: filter 0.5s ease;
-}
-#section > div .main #mainVideo.dark-video {
-  filter: brightness(50%);
 }
 #section > div .main #videoText {
   position: absolute;
@@ -178,6 +196,49 @@ section div {
   right: 5%;
 }
 
+#sectionDown {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  -webkit-clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%);
+          clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%);
+}
+#sectionDown div {
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#Left {
+  top: 0;
+  left: -100%;
+}
+
+#Up {
+  top: -100%;
+}
+
+#Right {
+  top: 0;
+  left: 100%;
+}
+
+#Down {
+  top: 100%;
+  left: 0%;
+}
+
+#Up #idCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1) translateX(-50%) translateY(-50%);
+}
+
 #Right {
   display: flex;
   align-items: center;
@@ -222,6 +283,7 @@ section div {
 }
 #Right > ul > li h1 {
   flex: 1;
+  margin-top: 10px;
 }
 #Right > ul > li h2 {
   flex: 1;
@@ -229,16 +291,20 @@ section div {
 #Right > ul > li h3 {
   flex: 1;
 }
+#Right > ul > li h3 p {
+  font-size: 18px;
+}
 #Right > ul > li h4 {
-  flex: 2;
+  flex: 2.2;
 }
 #Right > ul > li h4 p {
   font-size: 14px;
   padding: 0 30px;
   margin-top: 20px;
+  font-weight: lighter;
 }
 #Right > ul > li h5 {
-  flex: 0.8;
+  flex: 0.6;
 }
 
 .rightUl > li p {
@@ -254,37 +320,4 @@ h5 > a > p:hover {
   color: #3789cc;
   transform: scale(1.4);
   transition: 0.3s;
-}
-
-#sectionDown {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  -webkit-clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%);
-          clip-path: polygon(25% 100%, 75% 100%, 65% 50%, 35% 50%);
-}
-#sectionDown div {
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#Left {
-  top: 0;
-  left: -100%;
-}
-
-#Up {
-  top: -100%;
-}
-
-#Right {
-  top: 0;
-  left: 100%;
-}
-
-#Down {
-  top: 100%;
-  left: 0%;
 }/*# sourceMappingURL=style.css.map */

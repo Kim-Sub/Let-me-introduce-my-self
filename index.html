@@ -41,7 +41,12 @@
             <i class="fas fa-space-shuttle"></i>go Main
         </div>
 
+
+
+        
         <!-- 서브페이지 섹션 -->
+
+        <!-- ◀ sectionLeft 왼쪽-->
         <section id="sectionLeft" class="goSection">
             <div>
                 <i class="fas fa-sad-cry"></i> what's ?
@@ -50,17 +55,32 @@
         <div id="Left" class="subPage">
             지구
         </div>
+
+
+
+        <!-- ▲ sectionUp 위쪽 -->
         <section id="sectionUp" class="goSection">
             <div>
-                <i class="far fa-id-card"></i> my id
+                <i class="far fa-id-card"></i> id Card
             </div>
         </section>
         <div id="Up" class="subPage">
-            나는 누군가
+            <div class="movieContainer">
+                <video id="mainVideo" autoplay muted loop> 
+                    <source src="./video/movingUp.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="idCard">
+                이것은 아이디카드입니다.
+            </div>
         </div>
+
+
+
+        <!-- ▶ sectionRight 오른쪽-->
         <section id="sectionRight" class="goSection">
             <div>
-                <i class="fas fa-file-word"></i> portfolio
+                <i class="fas fa-file-word"></i> portFolio
             </div>
         </section>
         <div id="Right" class="subPage">
@@ -70,7 +90,7 @@
                             <img src="./img/portfolio1.png" alt="">
                         </div>
                         <h1>프로젝트 종류
-                            <p>관공서(클론코딩)</p>
+                            <p>관공서 (클론코딩)</p>
                         </h1>
                         <h2>프로젝트 이름
                             <p>강원관광</p>
@@ -78,7 +98,7 @@
                         <h3>언어
                             <p><i class="fab fa-html5"></i>HTML, <i class="fab fa-css3-alt"></i>CSS</p>
                         </h3>
-                        <h4>간략설명2
+                        <h4>간략설명
                             <p>
                                 웹개발 공부를 시작함과 동시에 도전한 관공서 클론코딩 <br>
                                 js를 사용할 줄 몰랐기에 css + 애니메이션으로 비슷한 <br>
@@ -95,7 +115,7 @@
                             <img src="./img/portfolio2.png" alt="">
                         </div>
                         <h1>프로젝트 종류
-                            <p>반응형 페이지(창작)</p>
+                            <p>반응형 페이지 (창작)</p>
                         </h1>
                         <h2>프로젝트 이름
                             <p>제네시스 회원가입</p>
@@ -103,7 +123,7 @@
                         <h3>언어
                             <p><i class="fab fa-css3-alt"></i>CSS , <i class="fab fa-js"></i>javaScript</p>
                         </h3>
-                        <h4>간략설명2
+                        <h4>간략설명
                             <p>
                                 html과 css를 학습한 후, js를 시작하며 배운 <br>
                                 정규식 표현으로 회원가입 페이지를 구축하였다 <br>
@@ -120,7 +140,7 @@
                             <img src="./img/portfolio3.png" alt="">
                         </div>
                         <h1>프로젝트 종류
-                            <p>bootStrap + sCSS(창작)</p>
+                            <p>bootStrap + sCSS (창작)</p>
                         </h1>
                         <h2>프로젝트 이름
                             <p>월드갤러리</p>
@@ -128,7 +148,7 @@
                         <h3>언어
                             <p><i class="fab fa-bootstrap"></i>bootStrap , <i class="fab fa-sass"></i>sCSS</p>
                         </h3>
-                        <h4>간략설명2
+                        <h4>간략설명
                             <p>
                                 부트스트랩으로 전반적인 프레임을 완성하였고 <br>
                                 sASS, sCSS를 활용하여 작업 능률과 활용성을 <br>
@@ -145,7 +165,7 @@
                             <img src="./img/portfolio4.png" alt="">
                         </div>
                         <h1>프로젝트 종류
-                            <p>상업용 기업페이지(창작)</p>
+                            <p>상업용 기업 페이지 (창작)</p>
                         </h1>
                         <h2>프로젝트 이름
                             <p>NB BIO</p>
@@ -153,7 +173,7 @@
                         <h3>언어
                             <p><i class="fab fa-sass"></i>sCSS , <i class="fab fa-js"></i>javaScript</p>
                         </h3>
-                        <h4>간략설명2
+                        <h4>간략설명
                             <p>
                                 GDWEB DESIGN AWARDS 수상작들을 벤치마킹하여 <br>
                                 최신 디자인과 페이지의 역동성에 초점을 두었고, <br>
@@ -167,14 +187,20 @@
                     </li>
                 </ul>
         </div>
+
+
+        
+        <!-- ▼ sectionDown 아래쪽-->
         <section id="sectionDown" class="goSection">
             <div>
-                <i class="fas fa-users"></i> sns
+                <i class="fas fa-users"></i> SNS
             </div>
         </section>
         <div id="Down" class="subPage">
             SNS
         </div>
+
+
     </main>
 </body>
 </html>
