@@ -82,13 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-// 왜 안되냐 여기 
-/* #sectionRight 클릭시 #Right>ul opacity 변경 */ 
-document.addEventListener('DOMContentLoaded', function() {
-  var sectionRight = document.getElementById('sectionRight');
-  var rightUl = document.getElementsByClassName('.rightUl');
 
-  sectionRight.addEventListener('click', function() {
-    rightUl.style.opacity = '1'
-  });
+/* #sectionRight 클릭시 #Right>ul>li opacity + clipPath 변경 */ 
+document.querySelector('#sectionRight').addEventListener('click', function() {
+  var listItems = document.querySelectorAll('#Right > ul > li');
+  var delay = 0;
+  var interval = 3000 / listItems.length;
+  
+  for (var i = 0; i < listItems.length; i++) {
+    setTimeout(function(item) {
+      item.style.opacity = '1';
+      item.style.clipPath = 'polygon(0 0, 100% 0, 100% 100%, 0 100%)';
+    }, delay, listItems[i]);
+    
+    delay += interval;
+  }
 });
+
+
+/* rightUL(포트폴리오)>li>div 높이 = 항상 너비와 동일하게  */
