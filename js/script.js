@@ -102,3 +102,10 @@ document.querySelector('#sectionRight').addEventListener('click', function() {
 
 /* #idCard 클릭시 scale(1)으로 변경 */
 // 원래 위치 ( top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%); )
+var idCard = document.getElementById('idCard');
+
+idCard.addEventListener('click', function() {
+  idCard.style.top = '50%';
+  idCard.style.left = '50%';
+  idCard.style.transform = 'scale(1) translateX(-50%) translateY(-50%)';
+});
