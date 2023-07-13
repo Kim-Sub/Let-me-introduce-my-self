@@ -408,14 +408,15 @@ h5 > a > p:hover {
   cursor: pointer;
 }
 #Down .snsFrame ul li::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
-  height: 100%;
+  height: 10%;
   border-top: 1px solid white;
   transition: 0.5s ease-in-out;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -445,11 +446,19 @@ h5 > a > p:hover {
 #Down .snsFrame ul li a p {
   font-size: 30px;
 }
-
-.snsFrame > ul > li:nth-child(4) img {
-  filter: invert(0.3);
+#Down .snsFrame ul li:nth-child(1)::after {
+  content: "웹개발에 관련된 소소한 팁과 일상 컨텐츠가 업로드되는 블로그";
+}
+#Down .snsFrame ul li:nth-child(2)::after {
+  content: "매일매일 심어가는 잔디의 뿌듯함";
+}
+#Down .snsFrame ul li:nth-child(3)::after {
+  content: "나만 없어 고냥이";
+}
+#Down .snsFrame ul li:nth-child(4)::after {
+  content: " ";
 }
 
-.snsFrame > ul > li:nth-child(1)::after {
-  content: "개발자 블로그";
+#Down > .snsFrame > ul > li:nth-child(4) img {
+  filter: invert(0.3);
 }/*# sourceMappingURL=style.css.map */
