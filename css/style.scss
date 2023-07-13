@@ -176,7 +176,14 @@ section{
                                 img{width: 50px; height: 50px; margin-right: 5%;}
                             }}
                     }
-                    .achieve{width: 40%; height: 50%;}
+                    .experience{
+                        width: 40%; height: 50%; margin-top: -50px;
+                        display: flex; flex-direction: column; justify-content: space-around;
+                        h1{
+                            text-align: center; font-size: 15px;
+                           
+                        }
+                    }
             }
         }
 }
@@ -262,7 +269,7 @@ section{
                 &:nth-child(1)::after{content: "웹개발에 관련된 소소한 팁과 일상 컨텐츠가 업로드되는 블로그";}
                 &:nth-child(2)::after{content: "매일매일 심어가는 잔디의 뿌듯함";}
                 &:nth-child(3)::after{content: "나만 없어 고냥이";}
-                &:nth-child(4)::after{content: "나의 청춘 비지니스 이야기";}
+                &:nth-child(4)::after{content: "청춘 비지니스 이야기";}
             }
         }
     }
