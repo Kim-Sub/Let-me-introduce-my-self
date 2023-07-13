@@ -5,9 +5,12 @@
 // 폰트 나눔고딕 // font-family: 'Nanum Gothic', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-
 // 컬러 팔레트
 $bg-color:#222;
+
+// 클래스 팔레트
+.flexCenter{display: flex; align-items: center; justify-content: center; vertical-align: middle;}
+
 
 // ★ 공통 영역
 body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;
@@ -25,8 +28,8 @@ section{
         background: rgba(0, 0, 0, .85);
         width: 100%; height: 100%; z-index: 3; 
         position: absolute; transition: .5s ease-in-out; scale: .1;
-        
 }
+
 .fa-html5{color: #e67533;}
 .fa-css3-alt{color: #3789cc;}
 .fa-bootstrap{color: #dd60e9;}
@@ -207,10 +210,30 @@ section{
         ul{
             width: 100%; height: 100%; display: flex; flex-wrap: wrap;
             li{
-                width: 50%; height: 50%;
-                &:nth-child(1){background: red;}    
+                position: relative; width: 50%; height: 50%; transition: .3s;
+                display: flex; justify-content: center; align-items: center;
+                cursor: pointer;
+                &::after{ // border 애니메이션 
+                    content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%;
+                    border-top: 1px solid white; transition: .5s ease-in-out;
+                    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+                }
+                &:hover{
+                    background:  rgba(0, 0, 0, .4);
+                    a{transform: scale(1);}
+                }
+                &:hover::after{width: 100%;}
+
+                a{
+                    display: flex; flex-direction: column; width: 100%; height: 100%; color: white;
+                    transition: .5s ease-in-out; transform: scale(.9);
+                    img{width: 100px; height: 100px; }
+                    p{font-size: 30px;}
+                }
             }
         }
 
     }
 }
+.snsFrame>ul>li:nth-child(4) img{filter: invert(.3);}
+.snsFrame>ul>li:nth-child(1)::after{content: "개발자 블로그";}
