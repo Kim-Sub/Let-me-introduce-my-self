@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // 폰트 IBM Plex Sans KR // font-family: 'IBM Plex Sans KR', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;600;800;900&display=swap');
 // 폰트 나눔고딕 // font-family: 'Nanum Gothic', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
@@ -83,7 +83,7 @@ section{
     }
 }
 #updateDate{ // 좌측 하단 updateDate
-    position: absolute; left: 0%; bottom: 0; z-index: 100;
+    position: absolute; left: 0%; bottom: 0; z-index: 100; font-weight: bolder;
 }
 
 
@@ -143,7 +143,7 @@ section{
                 width: 25%; height: 100% ; ;box-sizing: border-box;
                 display: flex; flex-direction: column;
                 border-right: 1px solid white; 
-                img{flex: 4; border-radius: 50%; padding: 30px; margin-left: -40px;}
+                img{flex: 4; border-radius: 50%; padding: 40px; margin-left: -40px;}
                 h1{flex: 1;
                     p{text-align: center; font-size: 18px; color: white;}
                 }
@@ -161,8 +161,10 @@ section{
                         width: 100%; height: 50%; padding: 30px 150px 50px 150px;
                         border-bottom: 1px solid white;
                         display: flex; flex-direction: column ;justify-content: center;
-                        h2{font-size: 18px; margin-top: 20px; letter-spacing: 1px; line-height: 1.1;}
-                        h3{margin-top: 20px; text-align: right;}
+                        h2{font-size: 18px; margin-top: 20px; letter-spacing: 1px; line-height: 1.5;
+                            em{display: block; margin-top: 20px;}
+                        }
+                        h3{margin-top: 40px; text-align: right;}
                     }
                     .skill{
                         width: 60%; height: 50%; display: flex; flex-direction: column;
@@ -207,9 +209,17 @@ section{
                     p{font-size: 18px;}
                 }
                 h4{flex: 2.2;
-                    p{font-size: 14px; padding: 0 30px; margin-top: 20px; font-weight: lighter;}
+                    p{
+                        font-size: 15px; padding: 0 20px; margin-top: 10px;
+                        font-weight: lighter; line-height: 1.6;}
                 }
-                h5{flex: .6;}
+                h5{flex: .6;
+                    a{
+                        p{
+                            i{font-size: 26px; font-weight: bold;}
+                        }
+                    }
+                }
             }
         }
 }

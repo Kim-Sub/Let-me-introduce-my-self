@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;600;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 .flexCenter {
   display: flex;
@@ -161,6 +161,7 @@ section div {
   left: 0%;
   bottom: 0;
   z-index: 100;
+  font-weight: bolder;
 }
 
 #sectionLeft {
@@ -265,7 +266,7 @@ section div {
 #Up #idCard .profile img {
   flex: 4;
   border-radius: 50%;
-  padding: 30px;
+  padding: 40px;
   margin-left: -40px;
 }
 #Up #idCard .profile h1 {
@@ -312,10 +313,14 @@ section div {
   font-size: 18px;
   margin-top: 20px;
   letter-spacing: 1px;
-  line-height: 1.1;
+  line-height: 1.5;
+}
+#Up #idCard .rightBox .hello h2 em {
+  display: block;
+  margin-top: 20px;
 }
 #Up #idCard .rightBox .hello h3 {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: right;
 }
 #Up #idCard .rightBox .skill {
@@ -401,13 +406,18 @@ section div {
   flex: 2.2;
 }
 #Right > ul > li h4 p {
-  font-size: 14px;
-  padding: 0 30px;
-  margin-top: 20px;
+  font-size: 15px;
+  padding: 0 20px;
+  margin-top: 10px;
   font-weight: lighter;
+  line-height: 1.6;
 }
 #Right > ul > li h5 {
   flex: 0.6;
+}
+#Right > ul > li h5 a p i {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .rightUl > li p {
