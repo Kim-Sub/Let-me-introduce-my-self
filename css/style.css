@@ -240,10 +240,9 @@ section div {
 
 #Up #idCard {
   position: absolute;
-  cursor: pointer;
   width: 90%;
   height: 90%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(36, 34, 34, 0.9);
   -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
   top: 0%;
@@ -253,6 +252,7 @@ section div {
   display: flex;
   padding: 50px;
   box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #Up #idCard .profile {
   width: 25%;
@@ -260,15 +260,13 @@ section div {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid white;
-  padding-right: 50px;
+  border-right: 1px solid white;
 }
 #Up #idCard .profile img {
   flex: 4;
   border-radius: 50%;
-}
-#Up #idCard .profile img:hover {
-  box-shadow: 3px 3px 15px 2px rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  margin-left: -40px;
 }
 #Up #idCard .profile h1 {
   flex: 1;
@@ -280,7 +278,7 @@ section div {
 }
 #Up #idCard .profile div {
   flex: 2;
-  margin-top: 30px;
+  margin-top: 20px;
   border-top: 1px solid white;
   box-sizing: border-box;
 }
@@ -291,12 +289,57 @@ section div {
   text-align: center;
 }
 #Up #idCard .rightBox {
+  display: flex;
+  flex-wrap: wrap;
   width: 75%;
   height: 100%;
-  padding-left: 50px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 50px;
+  box-sizing: border-box;
+}
+#Up #idCard .rightBox div {
+  padding: 50px 50px 0 50px;
+  box-sizing: border-box;
+}
+#Up #idCard .rightBox .hello {
+  width: 100%;
+  height: 50%;
+  padding: 30px 150px 50px 150px;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#Up #idCard .rightBox .hello h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+#Up #idCard .rightBox .hello h3 {
+  margin-top: 20px;
+  text-align: right;
+}
+#Up #idCard .rightBox .skill {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid white;
+}
+#Up #idCard .rightBox .skill h1 {
+  flex: 1;
+}
+#Up #idCard .rightBox .skill h1 p {
+  display: flex;
+  justify-content: center;
+}
+#Up #idCard .rightBox .skill h1 p img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5%;
+}
+#Up #idCard .rightBox .achieve {
+  width: 40%;
+  height: 50%;
 }
 
 #Right {
@@ -456,9 +499,5 @@ h5 > a > p:hover {
   content: "나만 없어 고냥이";
 }
 #Down .snsFrame ul li:nth-child(4)::after {
-  content: " ";
-}
-
-#Down > .snsFrame > ul > li:nth-child(4) img {
-  filter: invert(0.3);
+  content: "나의 청춘 비지니스 이야기";
 }/*# sourceMappingURL=style.css.map */
