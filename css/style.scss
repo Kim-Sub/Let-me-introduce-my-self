@@ -16,7 +16,7 @@ $bg-color:#222;
 body{color: white; overflow: hidden;  font-family: 'IBM Plex Sans KR', sans-serif;
     }
 section{
-    font-size: 60px; opacity: 1; cursor: pointer;
+    font-size: 60px; opacity: 1; cursor: pointer; transform: scale(.92);
     background: rgba(255, 255, 255, .1); opacity: 0; transition: .5s;
     &:hover{opacity: 1; transform: scale(.85); border: 2px solid white; }
     div{
@@ -85,6 +85,20 @@ section{
 #updateDate{ // 좌측 하단 updateDate
     position: absolute; left: 0%; bottom: 0; z-index: 100; font-weight: bolder;
 }
+#changeEarth{ // 좌측 하단 earth 버튼
+    position: absolute; left: -90px; bottom: 3.5%; width: 100px; height: 60px; 
+    z-index: 0; cursor: pointer; background: rgba(255, 255, 255, .05);
+    display: flex; justify-content: space-between; margin-bottom: 10px;
+    transition: .5s ease-in-out;
+    &:hover{left: 0%;}
+    p{
+        img{
+            width: 50px; height: 50px; border-radius: 50%; margin-left: 10px;
+            &:hover{box-shadow: 1px 1px 5px 1px #fff;}
+        }
+        &:nth-child(2){background: white; width: 10px; height: 100%;}
+    }
+}
 
 
 #sectionLeft{
@@ -124,6 +138,34 @@ section{
 #Up{top: -100%; }
 #Right{top: 0; left: 100%; ;}
 #Down{top: 100%; left: 0%; }
+
+
+// ◀ sectionLeft 왼쪽
+#Left{
+    
+}
+// ■■■■■■■ 작업공간 ■■■■■■■■ 
+#musicGallery{width: 100%; height: 100%; display: flex; align-items: center;}
+#musicGallery .galleryBg{width: 2160px; height: 600px;display: grid; padding: 0; box-sizing: border-box; background: rgba(255, 255, 255, .2);
+  grid-template-columns: repeat(3, 600px);
+ 
+}
+#musicGallery .itemBox{width: 600px; height: 300px;display: flex;position: relative;}
+#musicGallery .item{width: 300px;height: 300px;background: #ddd;z-index: 2;}
+#musicGallery .itemBox2{margin-left: 300px;}
+
+#musicGallery .item-cd{
+    border-radius: 50%; width: 300px;height: 300px;background: url(../img/color1.png) center center ;position: absolute; top: 0;left: 100px; z-index: 1; transition: 3s;
+}
+
+#musicGallery .itemBox:hover .item-cd{transition: linear 3s; transform: rotate(960deg);left: 280px; 
+
+}
+
+#musicGallery .itemBox .cd-1{width: 100%;height: 100%;position: relative; background: none;}
+#musicGallery .itemBox .cd-1 .s-cd-1{width: 65px;height: 65px; position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%); background: rgba(0, 0, 0, .9); z-index: 3; border-radius: 50%;}
+
+
 
 
 

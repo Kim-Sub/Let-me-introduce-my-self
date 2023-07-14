@@ -1,10 +1,17 @@
+/* 모바일기기 동영상 controls 비할성화 */
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+  var video = document.getElementById('mainVideo');
+  video.removeAttribute('controls');
+}
+
 /* what's ? 클릭시 지구로 동영상 교체 */
 document.addEventListener('DOMContentLoaded', function() {
-    var sectionLeft = document.getElementById('sectionLeft');
+    var changeEarth = document.getElementById('changeEarth');
     var mainVideo = document.getElementById('mainVideo');
     var isAlternate = false; 
 
-    sectionLeft.addEventListener('click', function() {
+    changeEarth.addEventListener('click', function() {
       if (isAlternate) {
         mainVideo.src = './video/main1.mp4' 
         isAlternate = false;
@@ -18,13 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* .goSection 클릭시 .subPage top:0; left:0 으로 이동 */
 document.addEventListener('DOMContentLoaded', function() {
-    //var sectionLeft = document.getElementById('sectionLeft');
+    var sectionLeft = document.getElementById('sectionLeft');
     var sectionUp = document.getElementById('sectionUp');
     var sectionRight = document.getElementById('sectionRight');
     var sectionDown = document.getElementById('sectionDown');
   
     var sections = [
-    //  { section: sectionLeft, element: document.getElementById('Left') },
+      { section: sectionLeft, element: document.getElementById('Left') },
       { section: sectionUp, element: document.getElementById('Up') },
       { section: sectionRight, element: document.getElementById('Right') },
       { section: sectionDown, element: document.getElementById('Down') }
