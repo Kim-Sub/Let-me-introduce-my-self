@@ -762,10 +762,10 @@ h5 > a > p:hover {
   #Up #idCard .rightBox .experience h2:nth-child(1) {
     margin-top: 50px;
   }
-  #idCard h1, #idCard h2 {
+  #idCard h1 {
     font-weight: lighter;
   }
-  #idCard h1 p, #idCard h2 p {
+  #idCard h1 p {
     font-weight: normal;
   }
   #Right {
