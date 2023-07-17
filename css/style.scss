@@ -269,8 +269,9 @@ section{
                 h3{flex: 1;
                     p{font-size: 18px;}
                 }
-                h4{flex: 2.2;
+                h4{flex: 2.2; 
                     p{
+                        
                         font-size: 15px; padding: 0 20px; margin-top: 10px;
                         font-weight: lighter; line-height: 1.6;}
                 }
@@ -332,148 +333,14 @@ section{
 
 // ■■■■■■■ 반응형 미디어 쿼리  ■■■■■■■■  
 // ■■■■■■■ 반응형 미디어 쿼리  ■■■■■■■■  
-// 모바일 폰
-@media screen and (max-width: 500px) {
+
+
+// 탭 
+@media screen and (min-width: 551px) and (max-width: 1050px) {
+
+
 // ★ 공통 영역
-section{
-    font-size: 25px; 
-    div{
-        width: 200px; 
-        }
-}
-
-// 모바일 nav 안내
-#mobileNav{
-    position: absolute; left: 20px; top: 20px; opacity: .5; background: rgba(255, 255, 255, .1);
-    width: 70px; height: 140px; border: 1px solid white; border-radius: 10px;
-    div{
-        width: 70px; height: 140px; position: relative;
-        >h1{position: absolute;}
-        .Left{left: 0%; bottom: 50%; transform: translateY(50%);}
-        .Up{left: 50%; top: 0%; transform: translateX(-50%);}
-        .Right{right: 0%; bottom: 50%; transform: translateY(50%);}
-        .Down{left: 50%; bottom: 0%; transform: translateX(-50%);}
-    }
-}
-#section{
-    >div{
-        .main{
-            #videoText{ //  비디오 위 텍스트 필터
-               
-               font-weight: 800; font-size: 60px; letter-spacing: -10px; white-space: pre;
-            }
-        }
-    }
-}
-
-#sectionLeft{ // lab
-    div{
-        top: 50%; transform: translateY(-50%); left: -5%;
-    }
-}
-#sectionRight{ // portfolio
-    div{
-        top: 50%; transform: translateY(-50%);right: -8%;
-    }
-}
-
-
-// ▲ sectionUp 위쪽
-#Up{
-    #idCard{// idCard
-            position: absolute; overflow-y: scroll; 
-            top: 20%; left: 24%; transform: scale(.4) translateX(-50%) translateY(-50%);
-            width: 90%; height: 90% ;
-            flex-direction: column; padding: 50px 35px; box-sizing: border-box;
-            font-weight: lighter; font-size: 13px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
-            .profile{
-                font-weight: lighter;
-                width: 100%; height: 100%  ;box-sizing: border-box; border-right: none;
-                img{padding: 20px; margin-left: 0px;}
-                div{
-                    margin-top: 20px; font-weight: normal !important;}
-            }
-            .rightBox{
-                display: flex; flex-direction: column; flex-wrap: nowrap;
-                width: 100%; height: fit-content; box-sizing: border-box;
-                font-weight: lighter
-                    div{width: 100%; padding: 0; box-sizing: border-box;}
-                    .hello{
-                        width: 100%; height: 70%; padding: 0; margin-top: 100px;
-                        h2{
-                            font-size: 18px;
-                        }
-                        h3{margin: 70px 0;}
-                    }
-                    .skill{
-                        width: 100%; height: fit-content ;border-right: none;
-                        margin: 30px 0; padding: 50px 0; 
-                        h1{
-                           margin-bottom: 30px;
-                           &:nth-child(1){margin-top: 40px;}
-                            p{
-                                img{width: 40px; height: 40px; margin-right: 5%;}
-                            }}
-                    }
-                    .experience{
-                        width: 100%; height: fit-content ;
-                        margin-top: -30px; padding: 50px 0; border-top: 1px solid white;
-                        h2{
-                            text-align: center; font-size: 18px; line-height: 2.2;
-                            &:nth-child(1){margin-top: 50px;}
-                        }
-                    }
-            }
-        }
-}
-#idCard h1{
-    font-weight: lighter;
-    p{font-weight: normal;}
-}
-
-
-
-
-// ▶ sectionRight 오른쪽
-#Right{overflow-y: scroll; padding-bottom: 50px;
-        >ul{
-            flex-direction: column; width: 100%; height: 85%; margin: 27px; padding-top: 2px;
-            >li{
-                width: 100%; height: 100%; margin: 0; margin-bottom: 75px;
-                &:last-child{margin-bottom: 50px;}
-            }
-        }
-}
-    .rightUl>li p{text-align: center; font-size: 20px; color: white;
-        i{margin-right: 5px;}
-    }
-    h5>a>p:hover{color: #3789cc; transform: scale(1.4); transition: .3s; }
-
-
-
-// ▼ sectionDown 아래쪽
-#Down{
-    .snsFrame{
-        width: 80%; height: 80% ;
-        ul{
-            li{
-                a{
-                    img{width: 100px; height: 100px; }
-                    p{font-size: 28px;}
-                }
-            }
-        }
-    }
-}
-
-
-}
-
-// 테블릿 탭 
-@media screen and (min-width: 501px) and (max-width: 1050px) {
-
+section{font-size: 40px; }
 
 // 모바일 nav 안내
 #mobileNav{
@@ -500,12 +367,12 @@ section{
 
 #sectionLeft{ // lab
     div{
-        top: 50%; transform: translateY(-50%); left: -2%;
+        top: 50%; transform: translateY(-50%);  left: -5.5%;
     }
 }
 #sectionRight{ // portfolio
     div{
-        top: 50%; transform: translateY(-50%);right: -2%;
+        top: 50%; transform: translateY(-50%); right: -5.5%;
     }
 }
 
@@ -568,18 +435,15 @@ section{
 // ▶ sectionRight 오른쪽
 #Right{overflow-y: scroll; padding-bottom: 50px;
         >ul{
-            flex-direction: column; width: 100%; height: 85%; margin: 27px; padding-top: 2px;
+            flex-direction: row; flex-wrap: wrap; justify-content: space-around;
+            width: 100%; height: 85%; margin: 27px; padding-top: 2px;
             >li{
-                width: 100%; height: 100%; margin: 0; margin-bottom: 75px;
-                &:last-child{margin-bottom: 50px;}
+                display: flex; flex-direction: column; flex-basis: 42%; 
+                width: 100%; height: 85%;
+                margin: 0; margin-bottom: 75px;
             }
         }
 }
-    .rightUl>li p{text-align: center; font-size: 20px; color: white;
-        i{margin-right: 5px;}
-    }
-    h5>a>p:hover{color: #3789cc; transform: scale(1.4); transition: .3s; }
-
 
 
 // ▼ sectionDown 아래쪽
@@ -597,3 +461,183 @@ section{
     }
 }
 }
+
+// ipad pro
+@media (min-width: 1024px) and (max-width: 1366px) and (min-height: 1366px) and (max-height: 2048px) {
+    #Right{
+            >ul{
+                >li{
+                    h4{
+                        p{
+                            font-size: 15px; padding: 0 20px; margin-top: 70px;
+                            font-weight: lighter; line-height: 1.6;}
+                    }
+                }
+            }
+    }
+  }
+  
+// 미니 탭
+@media screen and (min-width: 551px) and (max-width: 700px){
+// ★ 공통 영역
+section{font-size: 32px; }
+
+
+#sectionLeft{ // lab
+    div{
+        top: 50%; transform: translateY(-50%);  left: -10%;
+    }
+}
+#sectionRight{ // portfolio
+    div{
+        top: 50%; transform: translateY(-50%); right: -10%;
+    }
+}
+
+// ▶ sectionRight 오른쪽
+#Right{overflow-y: scroll; padding-bottom: 50px;
+    >ul{
+        flex-direction: row; flex-wrap: wrap; justify-content: space-around;
+        width: 100%; height: 85%; margin: 27px; padding-top: 2px;
+        >li{
+            display: flex; flex-direction: column; 
+            width: 100%; height: 80%;
+            margin: 0; margin-bottom: 75px;
+        }
+    }
+}
+}
+
+// 모바일 폰
+@media screen and (max-width: 550px) {
+    // ★ 공통 영역
+    section{
+        font-size: 25px; 
+        div{
+            width: 200px; 
+            }
+    }
+    
+    // 모바일 nav 안내
+    #mobileNav{
+        position: absolute; left: 20px; top: 20px; opacity: .5; background: rgba(255, 255, 255, .1);
+        width: 70px; height: 140px; border: 1px solid white; border-radius: 10px;
+        div{
+            width: 70px; height: 140px; position: relative;
+            >h1{position: absolute;}
+            .Left{left: 0%; bottom: 50%; transform: translateY(50%);}
+            .Up{left: 50%; top: 0%; transform: translateX(-50%);}
+            .Right{right: 0%; bottom: 50%; transform: translateY(50%);}
+            .Down{left: 50%; bottom: 0%; transform: translateX(-50%);}
+        }
+    }
+    #section{
+        >div{
+            .main{
+                #videoText{ //  비디오 위 텍스트 필터
+                   
+                   font-weight: 800; font-size: 60px; letter-spacing: -10px; white-space: pre;
+                }
+            }
+        }
+    }
+    
+    #sectionLeft{ // lab
+        div{
+            top: 50%; transform: translateY(-50%); left: -5%;
+        }
+    }
+    #sectionRight{ // portfolio
+        div{
+            top: 50%; transform: translateY(-50%);right: -8%;
+        }
+    }
+    
+    
+    // ▲ sectionUp 위쪽
+    #Up{
+        #idCard{// idCard
+                position: absolute; overflow-y: scroll; 
+                top: 20%; left: 24%; transform: scale(.4) translateX(-50%) translateY(-50%);
+                width: 90%; height: 90% ;
+                flex-direction: column; padding: 50px 35px; box-sizing: border-box;
+                font-weight: lighter; font-size: 13px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+                .profile{
+                    font-weight: lighter;
+                    width: 100%; height: 100%  ;box-sizing: border-box; border-right: none;
+                    img{padding: 20px; margin-left: 0px;}
+                    div{
+                        margin-top: 20px; font-weight: normal !important;}
+                }
+                .rightBox{
+                    display: flex; flex-direction: column; flex-wrap: nowrap;
+                    width: 100%; height: fit-content; box-sizing: border-box;
+                    font-weight: lighter
+                        div{width: 100%; padding: 0; box-sizing: border-box;}
+                        .hello{
+                            width: 100%; height: 70%; padding: 0; margin-top: 100px;
+                            h2{
+                                font-size: 18px;
+                            }
+                            h3{margin: 70px 0;}
+                        }
+                        .skill{
+                            width: 100%; height: fit-content ;border-right: none;
+                            margin: 30px 0; padding: 50px 0; 
+                            h1{
+                               margin-bottom: 30px;
+                               &:nth-child(1){margin-top: 40px;}
+                                p{
+                                    img{width: 40px; height: 40px; margin-right: 5%;}
+                                }}
+                        }
+                        .experience{
+                            width: 100%; height: fit-content ;
+                            margin-top: -30px; padding: 50px 0; border-top: 1px solid white;
+                            h2{
+                                text-align: center; font-size: 18px; line-height: 2.2;
+                                &:nth-child(1){margin-top: 50px;}
+                            }
+                        }
+                }
+            }
+    }
+    #idCard h1{
+        font-weight: lighter;
+        p{font-weight: normal;}
+    }
+    
+    
+    
+    
+    // ▶ sectionRight 오른쪽
+    #Right{overflow-y: scroll; padding-bottom: 50px;
+            >ul{
+                flex-direction: column; width: 100%; height: 85%; margin: 27px; padding-top: 2px;
+                >li{
+                    width: 100%; height: 100%; margin: 0; margin-bottom: 75px;
+                }
+            }
+    }
+    
+    
+    
+    // ▼ sectionDown 아래쪽
+    #Down{
+        .snsFrame{
+            width: 80%; height: 80% ;
+            ul{
+                li{
+                    a{
+                        img{width: 100px; height: 100px; }
+                        p{font-size: 28px;}
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    }
