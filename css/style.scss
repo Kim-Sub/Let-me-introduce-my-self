@@ -7,7 +7,6 @@
 
 // 컬러 팔레트
 $bg-color:#222;
-
 // 클래스 팔레트
 .flexCenter{display: flex; align-items: center; justify-content: center; vertical-align: middle;}
 
@@ -40,12 +39,12 @@ section{
 
 
 
-#main{width: 100%; height: 100%; position: relative;}
+#main{width: 100vw; height: 100vh; position: relative;  overflow: hidden;}
 // ★ 메인 섹션
 
 
 #section{
-    width: 100%; height: 100%; position: absolute;
+    width: 100vw; height: 100vh; position: absolute;
     >div{position: relative; width: 100%; height: 100%;
         .main{position: relative; 
             width: 100%; height: 100%; z-index: -1;
@@ -87,7 +86,7 @@ section{
 }
 #changeEarth{ // 좌측 하단 earth 버튼
     position: absolute; left: -90px; bottom: 3.5%; width: 100px; height: 60px; 
-    z-index: 0; cursor: pointer; background: rgba(255, 255, 255, .05);
+    z-index: 3; cursor: pointer; background: rgba(255, 255, 255, .05);
     display: flex; justify-content: space-between; margin-bottom: 10px;
     transition: .5s ease-in-out;
     &:hover{left: 0%;}
@@ -101,7 +100,7 @@ section{
 }
 
 
-#sectionLeft{
+#sectionLeft{ // lab
     width: 100%; height: 100%; position: absolute; z-index: 2; 
     clip-path: polygon(0 0, 25% 0, 35% 50%, 25% 100%, 0 100%, 0 50%); 
     div{
@@ -142,7 +141,13 @@ section{
 
 // ◀ sectionLeft 왼쪽
 #Left{
-    
+    display: flex; flex-direction: column;
+    h1{
+        display: flex; justify-content: space-between;
+        >p{
+            height: 30px; color: #e4b51a; font-size: 30px;
+        }
+    }
 }
 // ■■■■■■■ 작업공간 ■■■■■■■■ 
 #musicGallery{width: 100%; height: 100%; display: flex; align-items: center;}
@@ -237,20 +242,18 @@ section{
     display: flex; align-items: center; 
         >ul{
             z-index: 20; display: flex; 
-            width: 200%; height: 75%; margin: 50px ; 
+            width: 200%; height: 75%; margin: 50px ; box-sizing: border-box; 
             >li{
-                display: flex; flex-direction: column; 
+                display: flex; flex-direction: column;  flex-basis: 25;
                 width: 25%; height: 100%; margin: 0 25px; border: 1px solid white;
                 padding: 15px; border-radius: 10px; box-sizing: border-box;
                 opacity: 0; transition: .5s; 
                 clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
                 color: #777; // ← 폰트컬러
                 &:hover{border: 1px solid #3789cc;}
-                
+
                 div{flex: 5; width: 100%; height: 100%;
-                    img{  width: 100%; height: 100%; border-radius: 10px;
-                        object-fit: fill;
-                    }
+                    img{  width: 100%; height: 100%; border-radius: 10px; object-fit: fill;}
                 }
                 h1{flex: 1; margin-top: 10px;}
                 h2{flex: 1;}
@@ -315,4 +318,143 @@ section{
             }
         }
     }
+}
+
+
+// ■■■■■■■ 반응형 미디어 쿼리  ■■■■■■■■  모바일은 호버가 불가능하니 가이드 만들어야함
+@media screen and (max-width: 414px) and (max-height: 896px) {
+// ★ 공통 영역
+section{
+    font-size: 25px; 
+    div{
+        width: 200px; 
+        }
+}
+
+
+
+#section{
+    >div{
+        .main{
+            #videoText{ //  비디오 위 텍스트 필터
+               
+               font-weight: 800; font-size: 60px; letter-spacing: -10px; white-space: pre;
+            }
+        }
+    }
+}
+
+#sectionLeft{ // lab
+    div{
+        top: 50%; transform: translateY(-50%); left: -5%;
+    }
+}
+#sectionRight{ // portfolio
+    div{
+        top: 50%; transform: translateY(-50%);right: -8%;
+    }
+}
+
+// 위쪽 수정 중
+// 위쪽 수정 중
+// 위쪽 수정 중
+// 위쪽 수정 중
+// 위쪽 수정 중
+// 위쪽 수정 중
+// 위쪽 수정 중
+// ▲ sectionUp 위쪽
+#Up{
+    #idCard{// idCard
+            position: absolute;
+            width: 90%; height: 90% ;background: rgba(36, 34, 34, 0.9);
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+            // 원래 위치 ( top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%); )
+            // 수정 위치 ( top: 0%; left: 0%; transform: scale(.2) translateX(-50%) translateY(-50%);)
+            top: 0%; left: 0%; transform: scale(.2) translateX(-50%) translateY(-50%);
+            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            display: flex; padding: 50px; box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            .profile{
+                width: 25%; height: 100% ; ;box-sizing: border-box;
+                display: flex; flex-direction: column;
+                border-right: 1px solid white; 
+                img{flex: 4; border-radius: 50%; padding: 40px; margin-left: -40px;}
+                h1{flex: 1;
+                    p{text-align: center; font-size: 18px; color: white;}
+                }
+                div{flex:2; margin-top: 20px; border-top: 1px solid white;  box-sizing: border-box;
+                    h2{flex: 1;
+                        p{text-align: center;}
+                    }
+                }
+            }
+            .rightBox{
+                display: flex; flex-wrap: wrap;
+                width: 75%; height: 100%;box-sizing: border-box;
+                    div{padding: 50px 50px 0 50px; box-sizing: border-box;}
+                    .hello{
+                        width: 100%; height: 50%; padding: 30px 150px 50px 150px;
+                        border-bottom: 1px solid white;
+                        display: flex; flex-direction: column ;justify-content: center;
+                        h2{font-size: 18px; margin-top: 20px; letter-spacing: 1px; line-height: 1.5;
+                            em{display: block; margin-top: 20px;}
+                        }
+                        h3{margin-top: 40px; text-align: right;}
+                    }
+                    .skill{
+                        width: 60%; height: 50%; display: flex; flex-direction: column;
+                        border-right: 1px solid white;
+                        h1{
+                            flex: 1;
+                            p{
+                                display: flex; justify-content: center;
+                                img{width: 50px; height: 50px; margin-right: 5%;}
+                            }}
+                    }
+                    .experience{
+                        width: 40%; height: 50%; margin-top: -50px;
+                        display: flex; flex-direction: column; justify-content: space-around;
+                        h1{
+                            text-align: center; font-size: 15px;
+                           
+                        }
+                    }
+            }
+        }
+}
+
+
+
+// ▶ sectionRight 오른쪽
+#Right{overflow-y: scroll;
+        >ul{
+            flex-direction: column; width: 100%; height: 85%; margin: 27px; padding-top: 2px;
+            >li{
+                width: 100%; height: 100%; margin: 0; margin-bottom: 75px;
+            }
+        }
+}
+    .rightUl>li p{text-align: center; font-size: 20px; color: white;
+        i{margin-right: 5px;}
+    }
+    h5>a>p:hover{color: #3789cc; transform: scale(1.4); transition: .3s; }
+
+
+
+// ▼ sectionDown 아래쪽
+#Down{
+    .snsFrame{
+        width: 80%; height: 80% ;
+        ul{
+            li{
+                a{
+                    img{width: 100px; height: 100px; }
+                    p{font-size: 28px;}
+                }
+            }
+        }
+    }
+}
+
+
 }
