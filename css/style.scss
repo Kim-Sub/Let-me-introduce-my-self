@@ -334,7 +334,43 @@ section{
 // ■■■■■■■ 반응형 미디어 쿼리  ■■■■■■■■  
 // ■■■■■■■ 반응형 미디어 쿼리  ■■■■■■■■  
 
+// pc 리사이징
+@media screen and (min-width: 1051px) and (max-width: 1700px){
+    #Up{
+        .movieContainer{width: 100%; height: 100%;
+            video{width: 100%; height: 100%;}
+        }
+        #idCard{// idCard
+                .rightBox{
+                        .hello{
+                            width: 100%; height: 60%; padding: 30px 20px 50px 40px;
+                            h3{margin-top: 20px; text-align: right;}
+                        }
+                        .skill{
+                            width: 60%; height: 40%; padding: 3%;
+                            h1{
+                                p{
+                                    img{width: 40px; height: 40px; margin-right: 5%;}
+                                }}
+                        }
+                        .experience{
+                            width: 40%; height: 40%; padding: 5%;
+                            h2{
+                                &:nth-child(1){margin-top: 40px;}
+                            }
+                        }
+                }
+            }
+    }
+}
 
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
+// ★ 작업중 Up쪽
 // 탭 
 @media screen and (min-width: 551px) and (max-width: 1050px) {
 
@@ -386,7 +422,7 @@ section{font-size: 40px; }
             clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
             .profile{
                 font-weight: lighter;
-                width: 100%; height: 100%  ;box-sizing: border-box; border-right: none;
+                width: 100%; height: fit-content  ;box-sizing: border-box; border-right: none;
                 img{padding: 20px; margin-left: 0px;}
                 div{
                     margin-top: 20px; font-weight: normal !important;}
@@ -394,10 +430,10 @@ section{font-size: 40px; }
             .rightBox{
                 display: flex; flex-direction: column; flex-wrap: nowrap;
                 width: 100%; height: fit-content; box-sizing: border-box;
-                font-weight: lighter
+                font-weight: lighter;
                     div{width: 100%; padding: 0; box-sizing: border-box;}
                     .hello{
-                        width: 100%; height: 70%; padding: 0; margin-top: 100px;
+                        width: 100%; height: fit-content; padding: 0; margin-top: 100px;
                         h2{
                             font-size: 18px;
                         }
