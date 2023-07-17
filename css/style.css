@@ -389,10 +389,10 @@ section div {
   padding: 40px;
   margin-left: -40px;
 }
-#Up #idCard .profile h1 {
+#Up #idCard .profile > h1 {
   flex: 1;
 }
-#Up #idCard .profile h1 p {
+#Up #idCard .profile > h1 p {
   text-align: center;
   font-size: 18px;
   color: white;
@@ -403,10 +403,10 @@ section div {
   border-top: 1px solid white;
   box-sizing: border-box;
 }
-#Up #idCard .profile div h2 {
+#Up #idCard .profile div > h1 {
   flex: 1;
 }
-#Up #idCard .profile div h2 p {
+#Up #idCard .profile div > h1 p {
   text-align: center;
 }
 #Up #idCard .rightBox {
@@ -470,7 +470,7 @@ section div {
   flex-direction: column;
   justify-content: space-around;
 }
-#Up #idCard .rightBox .experience h1 {
+#Up #idCard .rightBox .experience h2 {
   text-align: center;
   font-size: 15px;
 }
@@ -667,121 +667,105 @@ h5 > a > p:hover {
   }
   #Up #idCard {
     position: absolute;
+    overflow-y: scroll;
+    top: 20%;
+    left: 24%;
+    transform: scale(0.4) translateX(-50%) translateY(-50%);
     width: 90%;
     height: 90%;
-    background: rgba(36, 34, 34, 0.9);
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
-    top: 0%;
-    left: 0%;
-    transform: scale(0.2) translateX(-50%) translateY(-50%);
-    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-    display: flex;
-    padding: 50px;
+    flex-direction: column;
+    padding: 50px 35px;
     box-sizing: border-box;
+    font-weight: lighter;
+    font-size: 13px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+            clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   }
   #Up #idCard .profile {
-    width: 25%;
+    font-weight: lighter;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid white;
+    border-right: none;
   }
   #Up #idCard .profile img {
-    flex: 4;
-    border-radius: 50%;
-    padding: 40px;
-    margin-left: -40px;
-  }
-  #Up #idCard .profile h1 {
-    flex: 1;
-  }
-  #Up #idCard .profile h1 p {
-    text-align: center;
-    font-size: 18px;
-    color: white;
+    padding: 20px;
+    margin-left: 0px;
   }
   #Up #idCard .profile div {
-    flex: 2;
     margin-top: 20px;
-    border-top: 1px solid white;
-    box-sizing: border-box;
-  }
-  #Up #idCard .profile div h2 {
-    flex: 1;
-  }
-  #Up #idCard .profile div h2 p {
-    text-align: center;
+    font-weight: normal !important;
   }
   #Up #idCard .rightBox {
     display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
     box-sizing: border-box;
-  }
-  #Up #idCard .rightBox div {
-    padding: 50px 50px 0 50px;
-    box-sizing: border-box;
+    font-weight: lighter div;
+    font-weight-width: 100%;
+    font-weight-padding: 0;
+    font-weight-box-sizing: border-box;
   }
   #Up #idCard .rightBox .hello {
     width: 100%;
-    height: 50%;
-    padding: 30px 150px 50px 150px;
-    border-bottom: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 70%;
+    padding: 0;
+    margin-top: 100px;
   }
   #Up #idCard .rightBox .hello h2 {
     font-size: 18px;
-    margin-top: 20px;
-    letter-spacing: 1px;
-    line-height: 1.5;
-  }
-  #Up #idCard .rightBox .hello h2 em {
-    display: block;
-    margin-top: 20px;
   }
   #Up #idCard .rightBox .hello h3 {
-    margin-top: 40px;
-    text-align: right;
+    margin: 70px 0;
   }
   #Up #idCard .rightBox .skill {
-    width: 60%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid white;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-right: none;
+    margin: 30px 0;
+    padding: 50px 0;
   }
   #Up #idCard .rightBox .skill h1 {
-    flex: 1;
+    margin-bottom: 30px;
   }
-  #Up #idCard .rightBox .skill h1 p {
-    display: flex;
-    justify-content: center;
+  #Up #idCard .rightBox .skill h1:nth-child(1) {
+    margin-top: 40px;
   }
   #Up #idCard .rightBox .skill h1 p img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 5%;
   }
   #Up #idCard .rightBox .experience {
-    width: 40%;
-    height: 50%;
-    margin-top: -50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: -30px;
+    padding: 50px 0;
+    border-top: 1px solid white;
   }
-  #Up #idCard .rightBox .experience h1 {
+  #Up #idCard .rightBox .experience h2 {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 2.2;
+  }
+  #Up #idCard .rightBox .experience h2:nth-child(1) {
+    margin-top: 50px;
+  }
+  #idCard h1, #idCard h2 {
+    font-weight: lighter;
+  }
+  #idCard h1 p, #idCard h2 p {
+    font-weight: normal;
   }
   #Right {
     overflow-y: scroll;
+    padding-bottom: 50px;
   }
   #Right > ul {
     flex-direction: column;
@@ -795,6 +779,9 @@ h5 > a > p:hover {
     height: 100%;
     margin: 0;
     margin-bottom: 75px;
+  }
+  #Right > ul > li:last-child {
+    margin-bottom: 50px;
   }
   .rightUl > li p {
     text-align: center;

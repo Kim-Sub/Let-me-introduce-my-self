@@ -191,11 +191,11 @@ section{
                 display: flex; flex-direction: column;
                 border-right: 1px solid white; 
                 img{flex: 4; border-radius: 50%; padding: 40px; margin-left: -40px;}
-                h1{flex: 1;
+                >h1{flex: 1;
                     p{text-align: center; font-size: 18px; color: white;}
                 }
                 div{flex:2; margin-top: 20px; border-top: 1px solid white;  box-sizing: border-box;
-                    h2{flex: 1;
+                    >h1{flex: 1;
                         p{text-align: center;}
                     }
                 }
@@ -226,7 +226,7 @@ section{
                     .experience{
                         width: 40%; height: 50%; margin-top: -50px;
                         display: flex; flex-direction: column; justify-content: space-around;
-                        h1{
+                        h2{
                             text-align: center; font-size: 15px;
                            
                         }
@@ -355,82 +355,72 @@ section{
     }
 }
 
-// 위쪽 수정 중
-// 위쪽 수정 중
-// 위쪽 수정 중
-// 위쪽 수정 중
-// 위쪽 수정 중
-// 위쪽 수정 중
-// 위쪽 수정 중
+
 // ▲ sectionUp 위쪽
 #Up{
     #idCard{// idCard
-            position: absolute;
-            width: 90%; height: 90% ;background: rgba(36, 34, 34, 0.9);
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
-            // 원래 위치 ( top: 50%; left: 50%; transform: scale(1) translateX(-50%) translateY(-50%); )
-            // 수정 위치 ( top: 0%; left: 0%; transform: scale(.2) translateX(-50%) translateY(-50%);)
-            top: 0%; left: 0%; transform: scale(.2) translateX(-50%) translateY(-50%);
-            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-            display: flex; padding: 50px; box-sizing: border-box;
+            position: absolute; overflow-y: scroll; 
+            top: 20%; left: 24%; transform: scale(.4) translateX(-50%) translateY(-50%);
+            width: 90%; height: 90% ;
+            flex-direction: column; padding: 50px 35px; box-sizing: border-box;
+            font-weight: lighter; font-size: 13px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
             .profile{
-                width: 25%; height: 100% ; ;box-sizing: border-box;
-                display: flex; flex-direction: column;
-                border-right: 1px solid white; 
-                img{flex: 4; border-radius: 50%; padding: 40px; margin-left: -40px;}
-                h1{flex: 1;
-                    p{text-align: center; font-size: 18px; color: white;}
-                }
-                div{flex:2; margin-top: 20px; border-top: 1px solid white;  box-sizing: border-box;
-                    h2{flex: 1;
-                        p{text-align: center;}
-                    }
-                }
+                font-weight: lighter;
+                width: 100%; height: 100%  ;box-sizing: border-box; border-right: none;
+                img{padding: 20px; margin-left: 0px;}
+                div{
+                    margin-top: 20px; font-weight: normal !important;}
             }
             .rightBox{
-                display: flex; flex-wrap: wrap;
-                width: 75%; height: 100%;box-sizing: border-box;
-                    div{padding: 50px 50px 0 50px; box-sizing: border-box;}
+                display: flex; flex-direction: column; flex-wrap: nowrap;
+                width: 100%; height: fit-content; box-sizing: border-box;
+                font-weight: lighter
+                    div{width: 100%; padding: 0; box-sizing: border-box;}
                     .hello{
-                        width: 100%; height: 50%; padding: 30px 150px 50px 150px;
-                        border-bottom: 1px solid white;
-                        display: flex; flex-direction: column ;justify-content: center;
-                        h2{font-size: 18px; margin-top: 20px; letter-spacing: 1px; line-height: 1.5;
-                            em{display: block; margin-top: 20px;}
+                        width: 100%; height: 70%; padding: 0; margin-top: 100px;
+                        h2{
+                            font-size: 18px;
                         }
-                        h3{margin-top: 40px; text-align: right;}
+                        h3{margin: 70px 0;}
                     }
                     .skill{
-                        width: 60%; height: 50%; display: flex; flex-direction: column;
-                        border-right: 1px solid white;
+                        width: 100%; height: fit-content ;border-right: none;
+                        margin: 30px 0; padding: 50px 0; 
                         h1{
-                            flex: 1;
+                           margin-bottom: 30px;
+                           &:nth-child(1){margin-top: 40px;}
                             p{
-                                display: flex; justify-content: center;
-                                img{width: 50px; height: 50px; margin-right: 5%;}
+                                img{width: 40px; height: 40px; margin-right: 5%;}
                             }}
                     }
                     .experience{
-                        width: 40%; height: 50%; margin-top: -50px;
-                        display: flex; flex-direction: column; justify-content: space-around;
-                        h1{
-                            text-align: center; font-size: 15px;
-                           
+                        width: 100%; height: fit-content ;
+                        margin-top: -30px; padding: 50px 0; border-top: 1px solid white;
+                        h2{
+                            text-align: center; font-size: 18px; line-height: 2.2;
+                            &:nth-child(1){margin-top: 50px;}
                         }
                     }
             }
         }
 }
+#idCard h1 ,#idCard h2{
+    font-weight: lighter;
+    p{font-weight: normal;}
+}
+
 
 
 
 // ▶ sectionRight 오른쪽
-#Right{overflow-y: scroll;
+#Right{overflow-y: scroll; padding-bottom: 50px;
         >ul{
             flex-direction: column; width: 100%; height: 85%; margin: 27px; padding-top: 2px;
             >li{
                 width: 100%; height: 100%; margin: 0; margin-bottom: 75px;
+                &:last-child{margin-bottom: 50px;}
             }
         }
 }
