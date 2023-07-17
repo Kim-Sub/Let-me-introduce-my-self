@@ -74,6 +74,11 @@ section div {
   overflow: hidden;
 }
 
+#thumbnail {
+  position: absolute;
+  left: -500%;
+}
+
 #section {
   width: 100vw;
   height: 100vh;
