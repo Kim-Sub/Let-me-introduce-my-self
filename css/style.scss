@@ -364,13 +364,6 @@ section{
     }
 }
 
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
-// ★ 작업중 Up쪽
 // 탭 
 @media screen and (min-width: 551px) and (max-width: 1050px) {
 
@@ -588,7 +581,17 @@ section{font-size: 32px; }
             top: 50%; transform: translateY(-50%);right: -8%;
         }
     }
-    
+
+
+    // ◀ sectionLeft 왼쪽
+    #Left{
+        overflow-x: scroll;
+        h1{
+            >p{
+            }
+        }
+    }
+
     
     // ▲ sectionUp 위쪽
     #Up{

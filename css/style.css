@@ -990,6 +990,9 @@ h5 > a > p:hover {
     transform: translateY(-50%);
     right: -8%;
   }
+  #Left {
+    overflow-x: scroll;
+  }
   #Up #idCard {
     position: absolute;
     overflow-y: scroll;
